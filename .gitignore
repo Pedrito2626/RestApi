@@ -4,3 +4,6 @@ node_modules/
 # Archivos de referencia locales
 Actividad_Evaluativa_Clase13.pdf
 Demo_API_REST_NodeJS.md
+
+# Claude Code
+.claude/
