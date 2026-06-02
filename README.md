@@ -1,11 +1,9 @@
 # API REST — Gestión de Productos
 
-**IF2003 - Programación Web**
-
 **Integrantes:**
 - Esteban Ramirez
-- Santiago Velez
-- David Valencia
+- Santiago Vélez
+- David Santiago Valencia
 
 ## Instrucciones para correr el proyecto
 
@@ -18,7 +16,7 @@ Abrir `http://localhost:3000` en el navegador.
 
 ## Screenshot
 
-[Agregar captura de pantalla aquí]
+<img width="1580" height="577" alt="image" src="https://github.com/user-attachments/assets/1dcb10f7-e705-42a4-8c92-fa879185120b" />
 
 ## Endpoints
 
