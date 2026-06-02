@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Productos — IF2003</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div class="app">
+
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-brand">
+          <div class="brand-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <div>
+            <h1 class="brand-title">Gestión de Productos</h1>
+            <p class="brand-sub">IF2003 · API REST</p>
+          </div>
+        </div>
+        <div class="header-stats">
+          <div class="stat">
+            <span class="stat-num" id="stat-total">—</span>
+            <span class="stat-label">Total</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <span class="stat-num success" id="stat-disponibles">—</span>
+            <span class="stat-label">Disponibles</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <span class="stat-num error" id="stat-agotados">—</span>
+            <span class="stat-label">Agotados</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="global-message" class="global-message hidden" aria-live="polite"></div>
+
+    <main class="main">
+
+      <section class="form-section">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Agregar Producto</h2>
+          </div>
+          <form id="form-producto" novalidate>
+            <div class="field">
+              <label for="input-nombre" class="label">Nombre</label>
+              <input
+                type="text"
+                id="input-nombre"
+                class="input"
+                placeholder="Ej: Teclado mecánico"
+                autocomplete="off"
+              />
+              <span class="field-error" id="error-nombre" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="input-precio" class="label">Precio (COP)</label>
+              <div class="input-prefix-wrap">
+                <span class="input-prefix">$</span>
+                <input
+                  type="number"
+                  id="input-precio"
+                  class="input with-prefix"
+                  placeholder="150000"
+                  min="0"
+                  step="1000"
+                />
+              </div>
+              <span class="field-error" id="error-precio" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="btn-crear">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+              Agregar Producto
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="table-section">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Inventario</h2>
+            <button class="btn btn-ghost btn-sm" id="btn-reload" title="Recargar lista">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                <path d="M21 3v5h-5"/>
+                <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
+                <path d="M8 16H3v5"/>
+              </svg>
+              Recargar
+            </button>
+          </div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="col-id">#</th>
+                  <th>Nombre</th>
+                  <th class="col-precio">Precio</th>
+                  <th class="col-estado">Estado</th>
+                  <th class="col-acciones">Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-productos">
+                <tr>
+                  <td colspan="5">
+                    <div class="table-state">
+                      <div class="spinner"></div>
+                      <span>Cargando productos...</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
