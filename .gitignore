@@ -1,0 +1,6 @@
+node_modules/
+.env
+
+# Archivos de referencia locales
+Actividad_Evaluativa_Clase13.pdf
+Demo_API_REST_NodeJS.md
