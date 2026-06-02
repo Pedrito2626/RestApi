@@ -2,8 +2,10 @@
 
 **IF2003 - Programación Web**
 
-**Nombre:** [NOMBRE COMPLETO DEL ESTUDIANTE]
-**Código:** [CÓDIGO ESTUDIANTIL]
+**Integrantes:**
+- Esteban Ramirez
+- Santiago Velez
+- David Valencia
 
 ## Instrucciones para correr el proyecto
 
